@@ -1,0 +1,92 @@
+﻿@page
+@model APPPRHlulani.Pages.Goods_Money_DonationsModel
+
+<h2 class="custom-text-color">Make Donations</h2>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <h3 >Goods Donation</h3>
+            <style>
+                .custom-text-color {
+                    color: rebeccapurple;
+                    </style>
+
+                          <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.Date" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.Date" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.Items" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.Items" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.Items" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.Category" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.Category" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.Description" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.Description" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.Donator" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.Donator" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.Donator" class="text-danger"></span>
+            </div>
+
+
+            <h3>Monetary Donation</h3>
+
+            
+
+
+            <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.Amount" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.Amount" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.money_Date" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.money_Date" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.money_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GoodsMoneyDonations.money_Donator" class="control-label"></label>
+                <input asp-for="GoodsMoneyDonations.money_Donator" class="form-control" />
+                <span asp-validation-for="GoodsMoneyDonations.money_Donator" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<style>
+    .text-danger {
+        color: orange;
+    }
+    .form-group{
+        font-family:Arial;
+        font-size:medium;
+        font-weight:200;
+        color:white;
+    }
+    h3{
+        color:orange;
+        
+    }
+</style>

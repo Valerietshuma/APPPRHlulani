@@ -1,0 +1,49 @@
+﻿@page
+@model APPPRHlulani.Pages.disasterViewModel
+
+<p>
+    <a asp-page="/disasterView">Create New</a>
+    <a style="color:white" asp-page="/Home">Home</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.disaster[0].endDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.disaster[0].Location)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.disaster[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.disaster[0].Aid)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.disaster) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.endDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Aid)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.startDate">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.startDate">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.startDate">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

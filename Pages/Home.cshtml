@@ -1,0 +1,53 @@
+﻿@page
+@model APPPRHlulani.Pages.HomeModel
+@{
+}
+<div class="welcome-container">
+    <h1>Welcome to our Donation web</h1>
+    <p></p>
+
+    
+
+    <div class="action-buttons">
+        <a href="/Goods_Money_Donations" class="btn btn-primary">Make a Monetary OR Goods Donation</a>
+        <a href="/disaster" class="btn btn-warning">Report a Disaster</a>
+    </div>
+
+    <div class="view-links">
+        <a href="/View_Goods_Money_Donations">View All Monetary Donations</a><br />
+        <a href="/disasterView">View All Disasters</a><br />
+    </div>
+
+</div>
+
+<style>
+
+    .welcome-container {
+        text-align: center;
+        padding: 30px;
+        background-color: rebeccapurple;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-family:Bahnschrift;
+    }
+
+    .fun-icons img {
+        width: 100px;
+        margin: 20px 0;
+    }
+
+    .action-buttons .btn {
+        margin: 10px;
+        font-size: 18px;
+        background-color:orange;
+        color:purple;
+    }
+
+    .view-links a {
+        text-decoration: underline;
+        color:orangered;
+        font-style:italic;
+    }
+
+
+</style>

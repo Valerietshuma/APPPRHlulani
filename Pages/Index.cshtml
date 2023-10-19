@@ -1,0 +1,46 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Optional: Center vertically within the viewport */
+    }
+
+        .button-container button {
+            margin: 5px; /* Optional: Add margin between buttons */
+        }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">WELCOME! REGISTER/LOGIN TO DONATE</h1>
+   
+</div>
+
+<div class="action-buttons">
+    <a href="/Register" class="btn btn-primary">Register</a>
+    <a href="/Login" class="btn btn-success">Login</a>
+    
+</div>
+
+<style>
+
+    .action-buttons .btn {
+        margin: 30px;
+        font-size: 28px;
+         background:orange;
+         color:purple;
+
+    }
+    h1{
+        font-family:Bahnschrift;
+        font-weight:300;
+        color:darkorchid;
+        font-style:initial;
+
+</style>

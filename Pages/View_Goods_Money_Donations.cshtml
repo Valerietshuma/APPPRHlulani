@@ -1,0 +1,68 @@
+﻿@page
+@model APPPRHlulani.Pages.View_Goods_Money_DonationsModel
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsMoneyDonations[0].Items)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsMoneyDonations[0].Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsMoneyDonations[0].Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsMoneyDonations[0].Donator)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsMoneyDonations[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsMoneyDonations[0].money_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GoodsMoneyDonations[0].money_Donator)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.GoodsMoneyDonations) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Items)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Donator)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.money_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.money_Donator)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Date">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Date">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Date">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+    Total Amount:@Model.GoodsMoneyDonations.Sum(i=>i.Amount++)
+    Available Amount:@Model.GoodsMoneyDonations.Sum(i=>i.Amount-i.Items)
