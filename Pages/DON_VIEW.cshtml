@@ -1,0 +1,14 @@
+﻿@page
+@model APPPRHlulani.Pages.DON_VIEWModel
+
+p>
+<a asp-page="Create">Create New</a>
+</p>
+<p>Displaying Total Amounts</p>
+<div>
+    Total Money: @Model.GoodsMoneyDonations.Sum(i=>i.Amount)
+</div>
+
+<div>
+    Available Goods: @Model.GoodsMoneyDonations.Sum(i=>i.Items)
+</div>
