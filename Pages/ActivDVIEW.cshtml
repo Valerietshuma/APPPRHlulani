@@ -1,9 +1,14 @@
 ﻿@page
 @model APPPRHlulani.Pages.ActivDVIEWModel
+<h2>Curently Active Disasters</h2>
 
 @foreach (var item in Model.disaster)
 {
+    
         <div>
+        
+
+
         <strong style="color: white; font-weight: bold;">@Html.DisplayNameFor(model => item.Description):</strong>
         <span style="color: purple; font-weight: bold;">@Html.DisplayFor(modelItem => item.Description)</span>
         </div>
