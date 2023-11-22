@@ -1,74 +1,10 @@
 ﻿@page
 @model APPPRHlulani.Pages.ActivDVIEWModel
 
-<style>
-    /* Add some styling to the table */
-    .table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-    }
-
-        /* Style the table header */
-        .table th {
-            background-color: #f2f2f2;
-            padding: 8px;
-            text-align: left;
-        }
-
-        /* Style the table rows */
-        .table tr {
-            border-bottom: 1px solid #ddd;
-        }
-
-            /* Style alternating row colors */
-            .table tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
-
-        /* Style the table cells */
-        .table td {
-            padding: 8px;
-        }
-
-    /* Style the "Create New" link */
-    p a {
-        display: inline-block;
-        padding: 10px 15px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 4px;
-    }
-
-        p a:hover {
-            background-color: #0056b3;
-        }
-</style>
-
-
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.disaster[0].Aid)
-            </th>
-
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.disaster)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Aid)
-                </td>
-
-
-
-            </tr>
-        }
-    </tbody>
-</table>
+@foreach (var item in Model.disaster)
+{
+        <div>
+        <strong style="color: white; font-weight: bold;">@Html.DisplayNameFor(model => item.Description):</strong>
+        <span style="color: purple; font-weight: bold;">@Html.DisplayFor(modelItem => item.Description)</span>
+        </div>
+}
